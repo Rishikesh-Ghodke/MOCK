@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>E-Commerce Product Listing</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    
+    
+    <style>
+        .product-card {
+            transition: transform 0.3s ease-in-out;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h2 class="text-center bg-primary heading">Product Listing</h2>
+
+        <!-- Category Filter Dropdown -->
+        <div class="text-end mb-3">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                    Filter by Category
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item filter-btn" href="#" data-category="all">All</a></li>
+                    <li><a class="dropdown-item filter-btn" href="#" data-category="electronics">Electronics</a></li>
+                    <li><a class="dropdown-item filter-btn" href="#" data-category="clothing">Clothing</a></li>
+                    <li><a class="dropdown-item filter-btn" href="#" data-category="home">Home</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="row" id="product-list">
+            <div class="col-md-4 product-card mb-4" data-category="electronics">
+                <div class="card">
+                    
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Laptop">
+                    <div class="card-body">
+                        <h5 class="card-title">Laptop</h5>
+                        <p class="card-text">$800</p>
+                        <button class="btn btn-success">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 product-card" data-category="clothing">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="T-Shirt">
+                    <div class="card-body">
+                        <h5 class="card-title">T-Shirt</h5>
+                        <p class="card-text">$20</p>
+                        <button class="btn btn-success">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 product-card" data-category="home">
+                <div class="card">
+                    
+                    <img src="image1.webp" class="card-img-top" alt="Sofa">
+                    <div class="card-body">
+                        <h5 class="card-title">Sofa</h5>
+                        <p class="card-text">$500</p>
+                        <button class="btn btn-success">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 product-card" data-category="electronics">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Smartphone">
+                    <div class="card-body">
+                        <h5 class="card-title">Smartphone</h5>
+                        <p class="card-text">$600</p>
+                        <button class="btn btn-success">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 product-card" data-category="clothing">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Jeans">
+                    <div class="card-body">
+                        <h5 class="card-title">Jeans</h5>
+                        <p class="card-text">$40</p>
+                        <button class="btn btn-success">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 product-card" data-category="home">
+                <div class="card">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Table Lamp">
+                    <div class="card-body">
+                        <h5 class="card-title">Table Lamp</h5>
+                        <p class="card-text">$30</p>
+                        <button class="btn btn-success">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <script>
+        // Filtering logic
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function(event) {
+                event.preventDefault();
+                const category = button.getAttribute('data-category');
+                document.querySelectorAll('.product-card').forEach(cards => {
+                    if (category === 'all' || cards.getAttribute('data-category') === category) {
+                        cards.style.display = 'block';
+                    } else {
+                        cards.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+    <script src="bootstrap.min.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

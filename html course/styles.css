@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h2, h3 {
+    color: #0056b3;
+}
+
+.intro, .learning-paths, .categories, .course-table {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ol, ul {
+    padding: 20px;
+    list-style: none;
+}
+li{
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.learning-path-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 5px 5px 10px rgba(10, 0, 0, 0.1);
+}
+
+
+.learning-path {
+    background-color: #007bff;
+    color: white;
+    flex: 1;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 5px 5px 10px rgba(10, 0, 0, 0.1);
+    background-image: linear-gradient(to right, #007bff, #0056b3);
+    
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    margin-top: 20px;
+}

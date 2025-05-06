@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Reviews</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <!-- jQuery and jQuery Mobile JS -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <style>
+        .movie-poster {
+            width: 100%;
+            max-width: 300px;
+            margin: auto;
+            display: block;
+            border-radius: 10px;
+        }
+        .movie-content {
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div data-role="page" id="home">
+    <div data-role="header" data-theme="b">
+        <h1>Movie Reviews</h1>
+    </div>
+
+    <div data-role="content">
+
+        <!-- Movie 1 -->
+        <div data-role="collapsible" data-collapsed="false">
+            <h3>Inception</h3>
+            <div class="movie-content">
+                <img src="https://m.media-amazon.com/images/I/81p+xe8cbnL._AC_SY679_.jpg" class="movie-poster">
+                <p><strong>Genre:</strong> Sci-Fi, Thriller</p>
+                <p><strong>Summary:</strong> A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea.</p>
+                <p><strong>Review:</strong> A mind-bending thriller that challenges perception and delivers a powerful cinematic experience. Christopher Nolan at his best.</p>
+            </div>
+        </div>
+
+        <!-- Movie 2 -->
+        <div data-role="collapsible">
+            <h3>Parasite</h3>
+            <div class="movie-content">
+                <img src="https://m.media-amazon.com/images/I/91zL+RNYk-L._AC_SL1500_.jpg" class="movie-poster">
+                <p><strong>Genre:</strong> Drama, Thriller</p>
+                <p><strong>Summary:</strong> Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy and the destitute Kim family.</p>
+                <p><strong>Review:</strong> A dark and clever social commentary packed with tension, humor, and brilliance. A deserving Oscar winner.</p>
+            </div>
+        </div>
+
+        <!-- Movie 3 -->
+        <div data-role="collapsible">
+            <h3>The Dark Knight</h3>
+            <div class="movie-content">
+                <img src="https://m.media-amazon.com/images/I/51TbbxYpHrL._AC_SY679_.jpg" class="movie-poster">
+                <p><strong>Genre:</strong> Action, Crime, Drama</p>
+                <p><strong>Summary:</strong> Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.</p>
+                <p><strong>Review:</strong> An iconic performance by Heath Ledger and a gripping story make this one of the best superhero films ever made.</p>
+            </div>
+        </div>
+
+        <!-- Movie 4 -->
+        <div data-role="collapsible">
+            <h3>Interstellar</h3>
+            <div class="movie-content">
+                <img src="https://m.media-amazon.com/images/I/91cdOEoB6DL._AC_SY679_.jpg" class="movie-poster">
+                <p><strong>Genre:</strong> Adventure, Drama, Sci-Fi</p>
+                <p><strong>Summary:</strong> A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.</p>
+                <p><strong>Review:</strong> Visually stunning and emotionally profound, Interstellar is a journey of science, love, and human endurance.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-theme="b">
+        <h4>&copy; 2025 Movie Review App</h4>
+    </div>
+</div>
+
+</body>
+</html>

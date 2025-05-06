@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Catalog</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    .container {
+        text-align: center;
+        background-color: blue;
+        height: 100px;
+        padding: 20px 20px;
+        border-radius: 10px;
+      }
+      .container2 {
+        background-color: rgb(191, 210, 204);
+        height: 300px;
+        padding: 20px 20px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+      }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      border:2px solid black;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    }
+    th, td {
+      border: 2px solid #121111;
+      padding: 12px;
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+    }
+    .pagination {
+      margin-top: 20px;
+      text-align: center;
+      background-color: azure;
+    }
+    .pagination button {
+      padding: 5px 10px;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+    @media(max-width: 600px) {
+      td, th {
+        font-size: 12px;
+      }
+      img {
+        width: 40px;
+        height: 40px;
+      }
+      
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2>📦 Product Catalog</h2>
+</div>
+<div class="container2">
+  <table id="productTable">
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Product Name</th>
+        <th>Price (₹)</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody class="table-body"></tbody>
+    
+  </table>
+</div>
+
+<div class="pagination">
+    <button onclick="prevPage()">Previous</button>
+    <span id="pageInfo">Page 1</span>
+    <button onclick="nextPage()">Next</button>
+</div>
+
+  <script>
+    const products = [
+      { name: "Wireless Headphones", price: 7999, desc: "Noise-cancelling over-ear headphones.", img: "https://via.placeholder.com/60" },
+      { name: "Smartwatch", price: 12999, desc: "Fitness tracking smartwatch.", img: "https://via.placeholder.com/60" },
+      { name: "Gaming Mouse", price: 2499, desc: "Ergonomic gaming mouse.", img: "https://via.placeholder.com/60" },
+      { name: "Laptop Stand", price: 1999, desc: "Adjustable aluminium stand.", img: "https://via.placeholder.com/60" },
+      { name: "USB Hub", price: 699, desc: "4-port USB 3.0 hub.", img: "https://via.placeholder.com/60" },
+      { name: "Bluetooth Speaker", price: 2499, desc: "Portable mini speaker.", img: "https://via.placeholder.com/60" },
+      { name: "LED Monitor", price: 10499, desc: "24-inch Full HD monitor.", img: "https://via.placeholder.com/60" },
+      { name: "Webcam", price: 1799, desc: "HD 1080p webcam with mic.", img: "https://via.placeholder.com/60" },
+      { name: "Keyboard", price: 999, desc: "Mechanical RGB keyboard.", img: "https://via.placeholder.com/60" },
+      { name: "Mouse Pad", price: 299, desc: "Large gaming mouse pad.", img: "https://via.placeholder.com/60" },
+      { name: "Tablet", price: 15999, desc: "8-inch Android tablet.", img: "https://via.placeholder.com/60" },
+      { name: "Charger", price: 899, desc: "Fast USB charger.", img: "https://via.placeholder.com/60" }
+    ];
+
+    let currentPage = 1;
+    const rowsPerPage = 5;
+
+    function displayProducts() {
+      const start = (currentPage - 1) * rowsPerPage;
+      const end = start + rowsPerPage;
+      const tableBody = document.querySelector(".table-body");
+      tableBody.innerHTML = "";
+
+      const pageItems = products.slice(start, end);
+      for (const p of pageItems) {
+        const row = `<tr>
+          <td><img src="${p.img}" alt="${p.name}"></td>
+          <td>${p.name}</td>
+          <td>₹${p.price}</td>
+          <td>${p.desc}</td>
+        </tr>`;
+        tableBody.innerHTML += row;
+      }
+
+      document.getElementById("pageInfo").innerText = `Page ${currentPage} of ${Math.ceil(products.length / rowsPerPage)}`;
+    }
+
+    function nextPage() {
+      if (currentPage < Math.ceil(products.length / rowsPerPage)) {
+        currentPage++;
+        displayProducts();
+      }
+    }
+
+    function prevPage() {
+      if (currentPage > 1) {
+        currentPage--;
+        displayProducts();
+      }
+    }
+
+    displayProducts(); // initial load
+  </script>
+</body>
+</html>

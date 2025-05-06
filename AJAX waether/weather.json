@@ -1,0 +1,6 @@
+{
+    "New York": { "temperature": "15°C", "humidity": "80%", "condition": "Cloudy" },
+    "Los Angeles": { "temperature": "22°C", "humidity": "60%", "condition": "Sunny" },
+    "Chicago": { "temperature": "10°C", "humidity": "75%", "condition": "Rainy" },
+    "Houston": { "temperature": "30°C", "humidity": "70%", "condition": "Hot" }
+}

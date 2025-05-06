@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple To-Do List (AJAX Simulation)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+        }
+        .todo-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            width: 500px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        #new-task {
+            padding: 10px;
+            width: 70%;
+            margin: 20px 20px;
+        }
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        li {
+            list-style: none;
+            margin: 10px 0;
+            background: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        li span {
+            flex-grow: 1;
+        }
+        .edit {
+            background-color: #2196F3;
+            margin-right: 5px;
+        }
+        .delete {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div class="todo-container">
+        <h1>To-Do List</h1>
+        <div>
+            <input type="text" id="new-task" placeholder="Enter new task...">
+            <button onclick="addTask()">Add Task</button>
+        </div>
+        <ul id="task-list"></ul>
+    </div>
+
+    <script>
+        // DOM elements
+        const taskList = document.getElementById('task-list');
+        const newTaskInput = document.getElementById('new-task');
+
+        // Simulated XHR for local tasks
+        function fakeXHR(method, data) {
+            let localTasks = JSON.parse(localStorage.getItem('localTasks') || '[]');
+            if (method === 'POST') {
+                localTasks.push(data);
+                localStorage.setItem('localTasks', JSON.stringify(localTasks));
+                
+            } else if (method === 'PUT') {
+                for (let i = 0; i < localTasks.length; i++) {
+                    if (localTasks[i].id === data.id) {
+                        localTasks[i] = data;
+                    }
+                }
+                localStorage.setItem('localTasks', JSON.stringify(localTasks));
+                
+            } else if (method === 'DELETE') {
+                let newTasks = [];
+                for (let i = 0; i < localTasks.length; i++) {
+                    if (localTasks[i].id !== data.id) {
+                        newTasks.push(localTasks[i]);
+                    }
+                }
+                localTasks = newTasks;
+                localStorage.setItem('localTasks', JSON.stringify(localTasks));
+                
+            }
+        }
+
+        // Load local tasks from localStorage on page load
+        window.onload = function () {
+            loadLocalTasks();
+        };
+
+        function loadLocalTasks() {
+            const localTasks = JSON.parse(localStorage.getItem('localTasks') || '[]');
+            localTasks.forEach(task => {createTaskElement(task.id, task.title)});
+        }
+
+        // Add a new task
+        function addTask() {
+            const taskText = newTaskInput.value.trim();
+            if (!taskText) return;
+
+            const uniqueId = 'local-' + Date.now() + '-' + Math.floor(Math.random() * 1000);
+            const taskData = { id: uniqueId, title: taskText };
+
+            fakeXHR('POST', taskData);
+            createTaskElement(uniqueId, taskText);
+            newTaskInput.value = ''; // Clear input field
+        }
+
+        // Create task element
+        function createTaskElement(id, text) {
+            const li = document.createElement('li');
+            li.setAttribute('data-id', id);
+
+            const span = document.createElement('span');
+            span.textContent = text;
+
+            const editBtn = document.createElement('button');
+            editBtn.textContent = "Edit";
+            editBtn.className = "edit";
+            editBtn.onclick = () => editTask(li, span);
+
+            const deleteBtn = document.createElement('button');
+            deleteBtn.textContent = "Delete";
+            deleteBtn.className = "delete";
+            deleteBtn.onclick = () => deleteTask(li);
+
+            li.appendChild(span);
+            li.appendChild(editBtn);
+            li.appendChild(deleteBtn);
+            taskList.appendChild(li);
+        }
+
+        // Delete a task
+        function deleteTask(li) {
+            const taskId = li.getAttribute('data-id');
+            fakeXHR('DELETE', { id: taskId });
+            li.remove();
+        }
+
+        // Edit a task
+        function editTask(li, span) {
+            const newText = prompt("Edit your task:", span.textContent);
+            if (newText && newText.trim()) {
+                const taskId = li.getAttribute('data-id');
+                fakeXHR('PUT', { id: taskId, title: newText });
+                span.textContent = newText;
+            }
+        }
+    </script>
+</body>
+</html>

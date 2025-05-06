@@ -1,0 +1,13 @@
+body {
+    background-color: #f0f2f5;
+}
+.navbar-brand {
+    color: white;
+    font-size: 32px;
+}
+.form-control {
+    border-radius: 5px;
+}
+.btn-success {
+    font-weight: bold;
+}

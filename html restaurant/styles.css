@@ -1,0 +1,194 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #d35400;
+    color: white;
+    padding:  20px;
+    font-size: 22px;
+}
+
+/* Sections */
+section {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    
+
+    /*margin-top: 20px;*/
+}
+
+/* Dish Cards */
+.dish-card {
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-image: linear-gradient(to right, #0658aa, #b7d7ed);
+    
+    /*position: relative;*/
+    background-color: white;
+    color: white;
+}
+
+/* .dish-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+} */
+
+.dish-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.dish-card h3 {
+    margin: 15px 0 10px;
+    color: #f4f1f1;
+    font-size: 18px;
+}
+
+.dish-card p {
+    color: #fcfbfb;
+    padding: 0 15px 15px;
+    margin: 0;
+}
+
+.dish-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #e67e22;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Cuisine Cards */
+.cuisine-card {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: white;
+}
+#indian {
+    background-image: linear-gradient(to right, #cc2819, #d0bf06);
+}
+.cuisine-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.cuisine-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.cuisine-card h3 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.cuisine-card p {
+    color: #666;
+    padding: 0 15px;
+    margin: 0;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #e67e22;
+    color: white;
+    padding: 12px;
+}
+td {
+    padding: 10px;
+}
+table img {
+    width: 80px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;
+    height: 100px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        width: 95%;
+    }
+    
+    .card-container {
+        gap: 10px;
+    }
+    
+    .dish-card {
+        width: 180px;
+    }
+    
+    .cuisine-card {
+        width: 160px;
+        height: 160px;
+    }
+    
+    table img {
+        width: 60px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .dish-card, .cuisine-card {
+        width: 90%;
+    }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Facebook Clone</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <!-- Header -->
+        <nav class="navbar navbar-dark bg-primary px-4">
+            <h1 class="navbar-brand fs-2 fw-bold" >facebook</h1>
+            <form class="d-flex">
+                <input class="form-control me-2" type="text" placeholder="Email or Username">
+                <input class="form-control me-2" type="password" placeholder="Password">
+                <button class="btn btn-success">Login</button>
+            </form>
+        </nav>
+
+        <!-- Main Section -->
+        <div class="container mt-5">
+            <div class="row">
+                <!-- Left Side -->
+                <div class="col-md-6">
+                    <h3>Facebook is useless without friends.<br>Make More Friends.</h3>
+                    <img src="/facebook.jpg" alt="Facebook Connection" class="img-fluid mb-3">
+                </div>
+                
+                <!-- Right Side (Signup Form) -->
+                <div class="col-md-6">
+                    <h2>Create an Account</h2>
+                    <p>It's free and always will be.</p>
+                    
+                        <div class="row">
+                            <div class="col-md-6 mb-2">
+                                <form>
+                                <input type="text" class="form-control" placeholder="Firstname">
+                                </form>
+                            </div>
+                            <div class="col-md-6 mb-2">
+                                <form>
+                                <input type="text" class="form-control" placeholder="Lastname">
+                                </form>
+                            </div>
+                        </div>
+                        <form>
+                        <input type="email" class="form-control mb-2" placeholder="Email">
+                        <input type="email" class="form-control mb-2" placeholder="Re-enter email">
+                        <input type="password" class="form-control mb-2" placeholder="Password">
+                        <input type="date" class="form-control mb-2">
+                        <div class="mb-2">
+                            <input type="radio" name="gender" value="male"> Male
+                            <input type="radio" name="gender" value="female"> Female
+                        </div>
+                        <button class="btn btn-success w-100">Signup</button>
+                        </form>
+                    
+                    <p class="mt-2"><a href="#">Create a page for you.</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

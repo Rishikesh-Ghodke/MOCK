@@ -1,0 +1,124 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #0072ff, #00c6ff);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Navigation */
+nav {
+    background: #333;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background: #0072ff;
+    border-radius: 5px;
+}
+
+/* Sections */
+.section {
+    background: white;
+    padding: 50px 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Skills */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skill {
+    background: #0072ff;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Projects */
+.projects-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.project-card {
+    background: #eef;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact */
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    font-size: 24px;
+    margin: 0 10px;
+    color: #0072ff;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #005bb5;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}

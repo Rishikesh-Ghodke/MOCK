@@ -1,0 +1,32 @@
+[
+    {
+      "name": "John Doe",
+      "designation": "Software Engineer",
+      "department": "IT",
+      "salary": "$80,000",
+      "image": "https://randomuser.me/api/portraits/men/1.jpg"
+    },
+    {
+      "name": "Jane Smith",
+      "designation": "HR Manager",
+      "department": "Human Resources",
+      "salary": "$75,000",
+      "image": "https://randomuser.me/api/portraits/women/2.jpg"
+    }
+    ,
+    {
+      "name": "John Doe",
+      "designation": "Software Engineer",
+      "department": "IT",
+      "salary": "$80,000",
+      "image": "https://randomuser.me/api/portraits/men/1.jpg"
+    },
+    {
+      "name": "Jane Smith",
+      "designation": "HR Manager",
+      "department": "Human Resources",
+      "salary": "$75,000",
+      "image": "https://randomuser.me/api/portraits/women/2.jpg"
+    }
+  ]
+  

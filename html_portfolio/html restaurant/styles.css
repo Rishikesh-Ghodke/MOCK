@@ -1,0 +1,221 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+/* Header */
+header {
+    background-color: #d35400;
+    color: white;
+    padding: 20px;
+    font-size: 22px;
+}
+
+/* Sections */
+section {
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Dish Cards */
+.dish-card {
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    background-color: white;
+}
+
+.dish-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.dish-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+.dish-card h3 {
+    margin: 15px 0 10px;
+    color: #333;
+    font-size: 18px;
+}
+
+.dish-card p {
+    color: #666;
+    padding: 0 15px 15px;
+    margin: 0;
+}
+
+.dish-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #e67e22;
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Cuisine Cards */
+.cuisine-card {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: white;
+}
+
+.cuisine-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.cuisine-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.cuisine-card h3 {
+    margin: 0 0 10px;
+    color: #333;
+}
+
+.cuisine-card p {
+    color: #666;
+    padding: 0 15px;
+    margin: 0;
+}
+
+/* Menu Cards */
+.menu-cards {
+    align-items: stretch;
+}
+
+.menu-card {
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.menu-card h3 {
+    margin: 15px 15px 5px;
+    color: #333;
+    font-size: 20px;
+}
+
+.menu-card .description {
+    color: #666;
+    padding: 0 15px;
+    margin: 5px 0;
+    flex-grow: 1;
+}
+
+.menu-card .price {
+    background-color: #e67e22;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 0;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        width: 95%;
+    }
+    
+    .card-container {
+        gap: 10px;
+    }
+    
+    .dish-card {
+        width: 180px;
+    }
+    
+    .cuisine-card {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .menu-card {
+        width: 220px;
+    }
+    
+    .menu-card img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .dish-card, .cuisine-card, .menu-card {
+        width: 90%;
+    }
+    
+    .menu-card img {
+        height: 180px;
+    }
+} 

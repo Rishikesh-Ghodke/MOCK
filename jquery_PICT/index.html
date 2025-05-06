@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PICT Mobile Site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- jQuery & jQuery Mobile CDN -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<!-- Home / About Us Page -->
+<div data-role="page" id="about">
+    <div data-role="header" data-position="fixed">
+        <h1>
+            <img src="https://upload.wikimedia.org/wikipedia/en/6/6e/PICT_Logo.png"  style="height:32px;vertical-align:middle;margin-right:8px;">
+            PICT
+        </h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#about" data-transition="fade" class="ui-btn-active">About Us</a></li>
+                <li><a href="#courses" data-transition="slide">Courses</a></li>
+                <li><a href="#departments" data-transition="slidefade">Departments</a></li>
+                <li><a href="#contact" data-transition="flip">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="content">
+        <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?auto=format&fit=crop&w=800&q=80" alt="PICT Campus" style="width:100%;max-width:320px;display:block;margin:0 auto 18px auto;border-radius:10px;">
+        <h2 style="text-align:center">Pune Institute of Computer Technology </h2>
+        <br>
+        <p><b>Empowering Excellence in Engineering Education</b></p>
+        <h3>Welcome to PICT</h3>
+        <p>
+            Established in 1983, PICT is a premier institute in Pune, Maharashtra, renowned for its academic excellence, vibrant campus life, and cutting-edge research in engineering and technology.
+        </p>
+        <h3>Why Choose PICT?</h3>
+        <ul data-role="listview" data-inset="true">
+            <li>Highly qualified faculty and modern infrastructure</li>
+            <li>Strong industry connections and placement records</li>
+            <li>Active student clubs and technical events</li>
+            <li>Focus on innovation, research, and entrepreneurship</li>
+        </ul>
+        <h3>Vision & Mission</h3>
+        <b>Vision:</b> To be a globally recognized institution.<br>
+        <b>Mission:</b> To provide quality education and foster research and innovation.
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <h4>&copy; 2025 Pune Institute of Computer Technology</h4>
+    </div>
+</div>
+
+<!-- Courses Offered Page -->
+<div data-role="page" id="courses">
+    <div data-role="header" data-position="fixed">
+        <h1>
+            <img src="https://upload.wikimedia.org/wikipedia/en/6/6e/PICT_Logo.png" alt="PICT Logo" style="height:32px;vertical-align:middle;margin-right:8px;">
+            PICT
+        </h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#about" data-transition="fade">About Us</a></li>
+                <li><a href="#courses" data-transition="slide" class="ui-btn-active">Courses</a></li>
+                <li><a href="#departments" data-transition="slidefade">Departments</a></li>
+                <li><a href="#contact" data-transition="flip">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="content">
+        <h2>Courses Offered</h2>
+        <ul data-role="listview" data-inset="true">
+            <li>B.E. Computer Engineering</li>
+            <li>B.E. Information Technology</li>
+            <li>B.E. Electronics & Telecommunication</li>
+            <li>M.E. Computer Engineering</li>
+            <li>Ph.D. in Computer Engineering</li>
+        </ul>
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <h4>&copy; 2025 Pune Institute of Computer Technology</h4>
+    </div>
+</div>
+
+<!-- Departments Page -->
+<div data-role="page" id="departments">
+    <div data-role="header" data-position="fixed">
+        <h1>
+            <img src="https://upload.wikimedia.org/wikipedia/en/6/6e/PICT_Logo.png" alt="PICT Logo" style="height:32px;vertical-align:middle;margin-right:8px;">
+            PICT
+        </h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#about" data-transition="fade">About Us</a></li>
+                <li><a href="#courses" data-transition="slide">Courses</a></li>
+                <li><a href="#departments" data-transition="slidefade" class="ui-btn-active">Departments</a></li>
+                <li><a href="#contact" data-transition="flip">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="content">
+        <h2>Departments</h2>
+        <div data-role="collapsible-set">
+            <div data-role="collapsible">
+                <h3>Computer Engineering</h3>
+                <p>Focuses on software, hardware, and computing systems.</p>
+            </div>
+            <div data-role="collapsible">
+                <h3>Information Technology</h3>
+                <p>Deals with IT infrastructure, software, and networking.</p>
+            </div>
+            <div data-role="collapsible">
+                <h3>Electronics & Telecommunication</h3>
+                <p>Specializes in electronics, communication, and signal processing.</p>
+            </div>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <h4>&copy; 2025 Pune Institute of Computer Technology</h4>
+    </div>
+</div>
+
+<!-- Contact Information Page -->
+<div data-role="page" id="contact">
+    <div data-role="header" data-position="fixed">
+        <h1>
+            <img src="https://upload.wikimedia.org/wikipedia/en/6/6e/PICT_Logo.png" alt="PICT Logo" style="height:32px;vertical-align:middle;margin-right:8px;">
+            PICT
+        </h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#about" data-transition="fade">About Us</a></li>
+                <li><a href="#courses" data-transition="slide">Courses</a></li>
+                <li><a href="#departments" data-transition="slidefade">Departments</a></li>
+                <li><a href="#contact" data-transition="flip" class="ui-btn-active">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="content">
+        <h2>Contact Us</h2>
+        <ul data-role="listview" data-inset="true">
+            <li>Address: Survey No. 27, Dhankawadi, Pune - 411043, Maharashtra, India</li>
+            <li>Phone: +91-20-24371101</li>
+            <li>Email: pict@pict.edu</li>
+            <li><a href="https://pict.edu" target="_blank">Website: https://pict.edu</a></li>
+        </ul>
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <h4>&copy; 2025 Pune Institute of Computer Technology</h4>
+    </div>
+</div>
+
+</body>
+</html>
